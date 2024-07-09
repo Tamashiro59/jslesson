@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>アニメーション</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <style>
+    #button {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    var isFirstClick = true;
+      $('#button').click(function() {
+        if (isFirstClick) {
+          isFirstClick = false;
+          $(this).animate({ left: '+=300px', top: '+=300px' }, 1000);
+        }
+      });
+    // ここに処理を記述
+  });
+  </script>
+</head>
+<body>
+  <div id="button">
+    <p>button</p>
+  </div><!-- button -->
+</body>
+</html>
